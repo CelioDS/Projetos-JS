@@ -1,0 +1,41 @@
+
+
+
+h1{
+    box-shadow: 2px 0 0 #000000;
+    width: 17ch;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    animation: caret .5s step-end infinite alternate,
+     type 1s steps(20, end);
+}
+@keyframes type{
+    0%{
+        width: 0;
+    }
+}
+
+@keyframes caret{
+    50%{
+        box-shadow: 2px 0 0 rgb(0, 0, 0);
+    }
+}
+
+
+
+h2:after{
+    content: '|';
+    opacity: 1;
+    animation: piscar 0.8s infinite;
+}
+
+@keyframes piscar{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+

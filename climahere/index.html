@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M8RGZ1667M"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M8RGZ1667M");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/as.ico" type="image/x-icon">
+
+    <!--- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <!-- icon bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>clima city</title>
+    <meta
+      name="description"
+      content="Obtenha informações atualizadas sobre o clima da sua cidade. Verifique a temperatura, condições de chuva e sol, e saiba tudo sobre o tempo em Monte Mor."
+    />
+    <meta
+      name="keywords"
+      content="clima, tempo, clima atual, temperatura, chuva, sol, Monte Mor"
+    />
+    <meta name="author" content="Célio da Silva" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Tags do Open Graph -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Clima Here - Tudo sobre o clima da sua cidade"
+    />
+    <meta
+      property="og:description"
+      content="Obtenha informações atualizadas sobre o clima da sua cidade. Verifique a temperatura, condições de chuva e sol, e saiba tudo sobre o tempo em Monte Mor."
+    />
+    <meta property="og:url" content="https://climahere.netlify.app/" />
+    <meta property="og:site_name" content="Clima Here" />
+    <meta property="og:image" content="URL_DA_IMAGEM" />
+    <!-- Adicione a URL de uma imagem relacionada ao site, se desejar -->
+    <meta
+      property="article:published_time"
+      content="2023-04-21T13:52:42-03:00"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="error">
+        <h2>Buscando o clima da sua Cidade...</h2>
+        <p>Pelo jeito esta sem clima.</p>
+        <p>Igual <span>Voce & moren*</span></p>
+        <img
+          src="https://compras.wiki.ufsc.br/images/5/56/Erro.png"
+          alt="error"
+        />
+      </div>
+
+      <div class="loading">
+        <h2>Buscando o clima da sua Cidade...</h2>
+        <p>Espero que seja favoravel</p>
+        <p>Igual <span>Voce & moren*</span></p>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/39/39979.png"
+          alt="icone"
+        />
+      </div>
+
+      <div id="info">
+        <nav>
+          <h1 id="Digitalização">Confira o clima da sua Cidade...</h1>
+          <img id="weatherPhoto" class="weatherPhoto" src="/" alt="" />
+        </nav>
+
+        <section id="sectionClima">
+          <h4>
+            <span class="tempMin"></span>°C <br />
+            <i class="bi bi-thermometer-low">ᵐᶦⁿ</i>
+          </h4>
+          <h4>
+            <span class="temp"></span>°C <br />
+            <i class="bi bi-thermometer-half"></i>
+          </h4>
+          <h4>
+            <span class="tempMax"></span>°C <br />
+            <i class="bi bi-thermometer-high">ᵐᵃˣ</i>
+          </h4>
+          <h4>
+            <span class="humidade"></span> % <br />
+            <i class="bi bi-moisture"></i>
+          </h4>
+          <h4>
+            <span class="clima"></span> <br />
+            <img class="climaImg" src="" alt="" />
+          </h4>
+          <h4>
+            <span class="vento"></span> km/h <br />
+            <i class="bi bi-wind"></i>
+          </h4>
+        </section>
+        <section id="sectionApi">
+          <span id="erroCity">Cidade incorreta!!!</span>
+
+          <div class="input-group">
+            <input
+              type="text"
+              id="cidade"
+              name="cidade"
+              class="form-control"
+              placeholder="Pesquise sua cidade aqui..."
+            />
+            <span class="input-group-text">
+              <i class="bi bi-arrow-repeat"></i>
+            </span>
+          </div>
+
+          <h1 class="hora">12:34:56</h1>
+
+          <h1 class="city"></h1>
+          <p class="ip"></p>
+          <p class="loc"></p>
+          <p class="org"></p>
+          <p class="post"></p>
+          <p class="timezone"></p>
+        </section>
+        <img id="photo" src="#" crossorigin="anonymous" alt="" />
+      </div>
+      <footer id="footer">
+        <div>
+          <a href="mailto:celio01t@gmail.com"
+            ><i class="bi bi-envelope"></i>
+            <p>Email</p>
+          </a>
+          <a
+            href="https://github.com/CelioDS"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-github"></i>
+            <p>Github</p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/c%C3%A9lio-da-silva-3b20131b7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-linkedin"> </i>
+            <p>Linkedin</p>
+          </a>
+        </div>
+        <div>
+          <p>
+            Copyright © <span></span> <span id="ano"></span> - Todos os direitos
+            reservados
+          </p>
+          <a
+            href="https://multiversion.tech/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Criado e desenvolvido por <span>Célio</span>
+          </a>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="js/script.js"></script>
+</html>

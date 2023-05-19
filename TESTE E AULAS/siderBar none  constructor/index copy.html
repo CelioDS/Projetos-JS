@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style copy.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <script src="js/script.js" defer></script>
+    <title>SIDE BAR</title>
+</head>
+
+<body>
+    <aside class="sidebar menu-mobile">
+        <header class="sidebar-header ">
+            <img class="logo" src="https://img.freepik.com/fotos-gratis/tela-vazia-branca_1194-7555.jpg?w=2000"
+                alt="logo">
+        </header>
+        <nav>
+            <button class="button-mobile1" onclick="abrirmenu()">
+                <span>
+                    <i class="bi bi-list"></i>
+                    <span>menu</span>
+                </span>
+            </button>
+
+
+            <button class="menu-mobile1" onclick="abrirmenu()">
+                <span>
+                    <i class="bi bi-x-lg" style="font-size:23px ;"></i>
+                    <span>fechar</span>
+                </span>
+            </button>
+
+            <button class="cpu" onclick="abrirmenu()">
+                <span>
+                    <a href="#cpu">
+                        <i class="bi bi-cpu"></i>
+                    </a>
+                    <a href="#cpu">
+                        <span> CPU</span>
+                    </a>
+                </span>
+            </button>
+
+            <button class="placa-mae" onclick="abrirmenu()"> 
+                <span>
+                    <a href="#placa-mae">
+                        <i class="bi bi-motherboard"></i>
+                    </a>
+                    <a href="#placa-mae">
+                        <span>Placa-mãe</span>
+                    </a>
+                </span>
+            </button>
+
+            <button class="placa-video" onclick="abrirmenu()">
+                <span>
+                    <a href="#placa-video">
+                        <i class="bi bi-gpu-card"></i>
+                    </a>
+                    <a href="#placa-video">
+                        <span>GPU</span>
+                    </a>
+                </span>
+            </button>
+
+            <button class="memoria" onclick="abrirmenu()">
+                <span>
+                    <a href="#memory">
+                        <i class="bi bi-memory"></i>
+                    </a>
+                    <a href="#memory">
+                        <span>RAM</span>
+                    </a>
+                </span>
+            </button>
+
+            <button class="fonte" onclick="abrirmenu()">
+                <span>
+                    <a href="#fonte">
+                        <i class="bi bi-plug"></i>
+                    </a>
+                    <a href="#fonte">
+                        <span>Fonte</span>
+                    </a>
+                </span>
+            </button>
+
+            
+
+
+        </nav>
+    </aside>
+
+    <!-- Criando menu mobile-->
+
+
+
+    <main class="main">
+
+        <section id="cpu">
+            <div>
+                <h1>CPU / Processador</h1>
+                <p> O Cpu trate-se do cerebro do computador, e responsavel por processar todas as principais funcoes do
+                    mesmo</p>
+                <h2>Como funciona?</h2>
+                <p>A CPU processa os dados digitais de entrada e os associa as instruções armazenadas em sua memória.
+                    Então, fornece como saída os dados resultantes desse processamento. A velocidade de processamento
+                    das informações em um computador está diretamente relacionada à velocidade do processador</p>
+                <h2>O que é GHZ?</h2>
+                <p>Populamente conhecido com "clock", quando o computador tem 10GHz significa que ele transfere dados a
+                    uma velocidade de 10 bilhoes de ciclos de segundos.</p>
+            </div>
+
+            <div>
+                <figure>
+                    <div class="foto">
+                        <img src="img/amd-4952189_640.jpg" alt="CPU">
+                        <legend><a
+                                href="https://pixabay.com/pt/users/cebbi-15537516/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4952189">Chris</a>
+                        </legend>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section id="placa-mae">
+
+            <div>
+                <h1>o que e placa-mae?</h1>
+                <p>É o sistema/hardware que une todos os componentes e perifericos, fazendo com que todos funcione de
+                    forma
+                    correta e organizada.</p>
+            </div>
+
+
+            <div>
+                <figure>
+                    <div>
+                        <img src="img/technology-3126814_640.jpg" alt="placa-mae">
+                        <legend>
+                            <a
+                                href="https://pixabay.com/pt/users/aaronjolson-4628445/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3126814">Aaron
+                                Olson</a>
+                        </legend>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section id="placa-video">
+            <div>
+                <h1>O que é placa de video/ GPU?</h1>
+                <p>Placa de video e o componenete de computador responsavel por enviar a imagens para o monitor, no
+                    mundo
+                    game tao amada e desejada. </p>
+            </div>
+            <div>
+                <img src="img/nvidia-5264921_640.jpg" alt="placa-video">
+                        <legend> <a href="https://pixabay.com/pt/users/nanadua11-4908484/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5264921">NanaDua</a>
+                        </legend>
+            </div>
+
+        </section>
+
+
+
+        <section id="memoria">
+        
+
+
+
+            <div id='triangulo-para-cima'>
+                <ul>
+                    <li>
+                        <h4>Mais rapido</h4>
+                    </li>
+                    <li>Registradores <span></span></li>
+                    <li>Memoria cache</li>
+                    <li>Memoria RAM</li>
+                    <li>Flash</li>
+                    <li>HD / SSD</li>
+                    <li>
+                        <h4>Mais lento</h4>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="fonte">
+            <h1>o que é fonte?</h1>
+            <p>A fonte de alimentação é um componente de aparelhos eletrônicos que serve para transformar a energia
+                elétrica que chega pelas tomadas em uma corrente elétrica contínua.</p>
+        </section>
+    </main>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+*{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+
+
+body, ul{
+    margin: 0px;
+    padding: 0px;
+
+   
+}
+body{
+    min-height: 100vh;
+}
+
+p{
+    /*paragrafo*/
+    text-indent: 1em ;
+    margin-top: 0;
+  }
+
+h2{ 
+    /*paragrafo*/
+    text-align: center;
+    text-indent: 1em ;
+    margin-top: 0;
+  }
+
+
+header a, footer a{
+    font-style: none;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    
+}
+footer{
+    margin-top: 300px;
+}
+
+
+.logo{
+    font-size: 4vh;
+    font-weight: bolder;
+    color: black;   
+}
+
+.logo:hover, ul a:hover{  
+    color: rgb(0, 0, 0);
+    filter: drop-shadow( 3px 4px 4px  rgb(0, 201, 252));
+  
+}
+
+
+.head{
+    box-sizing: border-box; /*nao deixa passar do tamanho da tela*/
+    padding: 1rem;
+    height: 10vh;
+    background-image: linear-gradient(360deg, rgb(161, 172, 15),rgb(105, 163, 99));
+    display: flex; /*deixa no lado*/
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+.menu{
+    display: flex;  /*deixa no lado*/
+    list-style: none;
+    gap: .5rem;  /*espaço */
+}
+
+.menu a {
+    display: block;
+    padding: .5rem;
+}
+.btn-mobile{
+    display: none;
+}
+.btn-mobile.active{
+    color: rgb(0, 204, 255);
+    filter: drop-shadow( 3px 4px 4px  rgb(0, 0, 0));
+}
+
+
+.ativo, .ativo a{
+    color: rgb(7, 248, 248);
+    border-bottom: 2px solid rgb(0, 225, 255);
+    margin: 0 auto;
+    filter: drop-shadow( 3px 4px 4px  rgb(0, 0, 0));
+}
+
+
+footer a, h1 {
+color: white;;
+}
+
+.texto1{
+    text-align: justify;
+    background-color: #fff;
+}
+.texto1 h1{
+    text-align: center;
+}
+.calculadora{
+border: 1px solid black;
+display: flex;
+flex-direction: column;
+}
+
+.calculadora input:nth-child(3),input:nth-child(2){
+  border-bottom: 1px solid blue;
+  margin: 5px 100px;
+}
+
+
+.calculadora button{
+   font-weight: bolder;
+   color: aliceblue;  
+   padding: 15px;
+   margin: 0px 50px;
+   border-radius: 15px;
+    
+}
+
+@media (max-width:800px)
+{
+    .menu{
+        display: block;
+        position: absolute; /*dizer o tamanho 100%*/
+        width: 100%;
+        top: 77px;
+        right: 0;
+        background-color: rgb(199, 211, 245);
+        display: block;
+        height:0;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        
+    }
+
+    .menu  a {
+        padding: 1rem 0; /*cima e baixo*/
+        margin: 0 .1rem;
+        margin-right: 2rem;
+        border-bottom: 1px solid rgb(66, 66, 66);
+        text-align: center;
+        
+    }
+    .nav.active .menu{
+       height: calc(100vh - 90px);
+       visibility: visible;
+       overflow-y: auto;
+    }
+
+ 
+    .btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        font-weight: bolder;
+    }
+
+    .hamburguer{
+        display: block;
+        width: 28px;
+        border-top: 2px solid;
+        position: relative;
+    }
+    .hamburguer::after, .hamburguer::before{ /*para elemetno afeter existir precisa passar um conteudo*/
+        content: '';
+        display: block;
+        width: 28px;
+        height: 2px;
+        background-color: currentColor; /*manter a cor do pai*/
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+        }
+
+    .nav.active .hamburguer{
+         border-top-color:transparent ;
+        }
+
+    .nav.active .hamburguer::after{
+            transform: rotate(45deg);
+            top: -6px;  /*top so funciona se a posição for relativo absoluto ou fixo*/
+        }
+    .nav.active .hamburguer::before{
+            transform: rotate(-45deg);
+            top: 0;  /*top so funciona se a posição for relativo absoluto ou fixo*/
+        }
+  
+        
+    .ativo{
+        color: rgb(0, 225, 255);
+        border-bottom: 2px solid rgb(0, 225, 255);
+        margin: 0 auto;
+    }
+            
+
+    }
+
+/*Conteudo*/
+

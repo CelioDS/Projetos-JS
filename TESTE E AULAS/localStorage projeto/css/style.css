@@ -1,0 +1,52 @@
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(191, 196, 196);
+    overflow: hidden;
+    width: 60%;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+#logout{
+    padding: 10px 45px;
+    border-radius: 15px;
+    font-size: 15;
+    font-weight: bolder;
+    color: red;
+    border: 1px solid red;
+}
+#logout:hover{
+    transform: rotateY(10deg);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+}
+
+#welcome{
+    display: none;
+}
+
+#enviar{
+    padding: 2px 20px;
+    border-radius: 5px;
+    font-size: 15;
+    font-weight: bolder;
+    border: 1px solid;
+}
+#enviar:hover{
+    background-color: black;
+    color: #fff;
+}
+input{
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid;
+    }
+
+    #welcome{
+        text-align: center;
+    }

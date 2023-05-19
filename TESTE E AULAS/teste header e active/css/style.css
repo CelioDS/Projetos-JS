@@ -1,0 +1,127 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(196, 196, 196);
+    height: 10vh;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;  
+    text-transform: capitalize;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding-left: 10px;
+}
+li a{
+    padding: 3px 3px;
+    font-size: 17px;
+    transition: .5s;
+    color: #000;
+}
+
+
+.logo{
+    letter-spacing: 5px;
+    font-size: 15px;
+    border: 1px solid rgb(2, 2, 2);
+    color:rgb(0, 0, 0);
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 35px;
+    transition: .5s;
+}
+.logo:hover{
+    background-color: blue;
+    color: #FFf;
+}
+
+
+.active{
+   color: rgb(255, 255, 255);
+   font-size: 18px;
+}
+
+
+
+.menu{
+    display: none;
+    cursor: pointer;
+    padding: 5px 0 ;
+    width:28px;
+    border-bottom: 2px solid rgb(0, 0, 0);      
+}
+
+
+
+.menu::after, .menu::before{
+    content: '';  /* '\2630';  '\274c';    emoji em content*/
+    position: relative;
+    display: block;
+    width: 29px;
+    height: 2px;
+    background-color: currentColor; /*manter a cor do pai*/
+    margin-top: 5px;
+     
+   
+}
+
+.navHide{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh ;
+    align-items: center;
+    width: 100%;
+    line-height: 100px;
+    background-color: grey;
+    z-index: 1;
+    height: 90vh;
+    transition: 2s;
+}
+
+.menu.open::after{
+    opacity: 0;   
+} 
+.menu.open::before{
+    transform: rotate(90deg) translate(14px, 1px);
+    
+}
+.menu.open{
+    transform: rotate(-45deg) translate(-2px, -8px);
+    
+}
+
+    
+@media (max-width: 550px) {
+    
+    .menu{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+        
+  }
+      
+
+h1{
+    text-align: center;
+}
+h1::first-letter{
+    text-transform: capitalize;
+}

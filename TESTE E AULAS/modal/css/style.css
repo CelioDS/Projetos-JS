@@ -1,0 +1,85 @@
+*{
+    font-family: Helvetica;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button{
+ padding: 0.6rem 1.2rem;
+ background-color: #888;
+ color: #fff;
+ border: none;
+ border-radius: 0.25rem;
+ cursor: pointer;
+ opacity: 0.7;
+ font-size: 1rem;
+ transition: .9s;
+}
+
+#open-modal{
+    background-color:#007bff;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+
+  
+#fade, #modal{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+#modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform:  translate(-50%,-50%); /*CENTRALIZAR POSIÇÃO FIXA*/
+    background-color: #fff;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 25px;
+    border-radius: 15px;   
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+}
+
+#modal.hide,
+#fade.hide{
+    opacity: 0;
+   pointer-events: none;
+}
+
+#modal.hide{
+    top: 0;
+}
+
+
+body{
+    text-align: center;
+}

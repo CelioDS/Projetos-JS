@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-style: none;
+    list-style: none;    
+    text-decoration: none;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #121212;
+    color: #fff;
+    background-color: white;
+}
+header{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    align-self: center;
+}
+header .logo{
+    align-self: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.border{
+    border: 1px solid red;
+}
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    align-items: flex-start;
+    width: 220px;
+    height: 100%;
+    background-color: #000;
+    padding: 0px 10px 30px 10px;
+    border-right: 1px solid #2f3336;
+    transition: all 0.2s;
+    z-index: 100 !important;
+
+}
+
+.sidebar button{
+    background-color: transparent;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    color: inherit;
+    height: 60px;
+    padding: 0;
+    border: 0;  
+    width: 200px;
+    position: relative;
+}
+
+.sidebar button > span{
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: background-color 3s;
+    width: 200px;
+}
+.sidebar button > span > a:nth-child(1)  {
+    width: 30%;
+    padding: 7px 0;  
+}
+
+.sidebar button > span > a:nth-child(2) {
+    text-align: center;
+    width: 70%;
+    align-items: center;
+    padding: 15px 0;  
+    
+}
+
+.sidebar  button:hover > span {
+    background-color: rgb(204, 204, 200, 0.2);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.sidebar  button:not(:hover) > span {
+    opacity: 0.5;
+}
+.sidebar button  i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+    padding: 8px 0;
+    left: 15px;
+    
+}
+
+.sidebar a span{
+    padding: 14px; 
+}
+
+.sidebar button span span {
+    font-size: 14px; 
+    
+}
+
+.sidebar-header{
+    margin-top: 16px;
+    width: 100%;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius:  50%;
+    object-fit: cover;
+    transition: transform .4s;
+    cursor: pointer;
+    outline: 2px solid rgb(255, 255, 255);
+    outline-offset: 5px;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.sidebar > nav{
+    /*flex-grow   = quanto vai crescer
+      flex-shrink = quanto vai diminuir
+      flex-basis  = tamanho base
+    */
+    flex: 1 1 auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+}   
+
+.main{
+    margin-left: 220px;
+    overflow: hidden;
+    width: calc(100%- 250px);
+    overflow: hidden;
+}
+
+.menu-mobile1,.button-mobile1{
+    display: none ;
+}
+
+
+@media (width < 959px ){
+    .sidebar{
+        width: 72px;
+        transition: width  1s;
+
+    }
+    .sidebar:hover{
+        width: 240px;
+        overflow: hidden;
+    }
+    .sidebar:hover button span span{
+        opacity: 1;
+        visibility: visible;
+        transition: opacity  4s;
+    }
+    .sidebar  button:hover > span {
+        background-color: rgb(204, 204, 200, 0.2);
+        font-weight: bold;
+        transform: scale(1.05);
+    }
+
+    .sidebar button  > span > a > span{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .sidebar button > span{
+       width: 210px;
+    }
+    .main{
+        margin-left: 72px;
+        transition: margin 0.5s;
+    }
+    
+}
+
+@media (max-width : 480px){
+    .sidebar{
+        display: none;
+    }
+    .sidebar:hover{
+        width: 100vw;
+    }
+    .menu-mobile1{
+     display: flex;
+
+    }
+    
+    .button-mobile{
+        display: none ;
+      
+    }
+    .main{
+        margin-left: 0px;
+        margin-top: 56px;
+    }
+
+    .menu-mobile{
+        width: 100vw;
+        height: 6vh;
+        display: flex;          
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background-color: transparent;
+    }
+ 
+
+    .menu-mobile-active{
+        width: 100vw;
+        height: 100vh;
+        display: flex;   
+        z-index: 66; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        overflow: hidden; 
+        transition: background .4s; 
+        transition: height .4s ease-in-out; 
+      
+    }
+
+    .menu-mobile-active nav{
+        display: flex;   
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;    
+        background-color: transparent;
+        overflow: hidden; 
+    }
+
+
+    .menu-mobile-active nav .button-mobile1{
+       display: none;
+    }
+    .menu-mobile-active nav .menu-mobile1{
+        display: flex  !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 2px !important; 
+        padding:5px 10px;
+     }
+
+    .button-mobile1{
+        display: flex ;
+        
+    }
+    .menu-mobile nav button{
+        display: none;
+    }
+    .menu-mobile .logo{
+        display: none;
+    }
+
+    .menu-mobile button:nth-child(1) {
+        display: flex ;
+        position: fixed;
+        height: 6vh;
+        top: 0;
+        left: 0;
+        color: white;
+        background-color: black;
+        width: 100%;
+        padding:5px 10px;
+        margin: 0;    
+        width: 100%;
+    }
+
+    .sidebar button span:nth-child(1) i{
+        gap: 0px;
+        left: 0;
+    }
+
+    .menu-mobile button:nth-child(1) span,
+    .menu-mobile-active nav .menu-mobile1 span{
+        gap: 10px;
+    }
+
+
+    .menu-mobile button:nth-child(1):hover > span{
+        background-color: transparent !important;
+        letter-spacing: 3px;
+        color: grey;
+    }
+    .menu-mobile-active button span:hover{
+        background-color: black;
+    }
+
+  
+    
+    .menu-mobile button > span > span{
+        opacity: 1;
+        visibility: visible;       
+    }
+
+   .menu-mobile-active button > span > a > span{
+        opacity: 1;
+        visibility: visible;       
+    }
+    .menu-mobile-active button:nth-child(1n + 3)  > span {
+      display:flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      
+    }
+    .menu-mobile-active button:nth-child(1n + 3):hover  > span {
+        background-color: rgb(204, 204, 200, 0.2);
+      }
+    
+    .menu-mobile-active .logo{
+       position: absolute;
+       right: 30px;
+       top: 20px;
+       margin: 0;
+       padding: 0;
+       border: 1px solid white;
+    }
+}
+
+
+/************** CONTEUDO **************/
+
+
+.main{
+    color: #000;
+    background-color: white;
+}
+
+
+
+/******************************  CPU ******************************/

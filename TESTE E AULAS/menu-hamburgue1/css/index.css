@@ -1,0 +1,131 @@
+body, ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+header a{
+    font-style: none;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+a:hover{
+    color: aqua;
+}
+
+
+.logo{
+    font-size: 5vh;
+    font-weight: bolder;
+}
+
+.head{
+    box-sizing: border-box; /*nao deixa passar do tamanho da tela*/
+    padding: 1rem;
+    height: 10vh;
+    background-color: rgb(105, 163, 99);
+    display: flex; /*deixa no lado*/
+    align-items: center;
+    justify-content: space-between;
+ 
+}
+.menu{
+    display: flex;  /*deixa no lado*/
+    list-style: none;
+    gap: .5rem;  /*espaço */
+}
+
+.menu a {
+    display: block;
+    padding: .5rem;
+}
+.btn-mobile{
+    display: none;
+}
+.btn-mobile.active{
+    color: rgb(252, 0, 0);
+}
+
+#link.active{
+    color: rgb(221, 0, 0);
+    background-color: aqua;
+}
+
+@media (max-width:600px)
+{
+  
+    .menu{
+        display: block;
+        position: absolute; /*dizer o tamanho 100%*/
+        width: 100%;
+        top: 90px;
+        right: 0;
+        background-color: rgb(183, 190, 182);
+        display: block;
+        height:0;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        
+    }
+
+    .menu  a {
+        padding: 1rem 0; /*cima e baixo*/
+        margin: 0 1rem;
+        border-bottom: 1px solid rgb(66, 66, 66);
+        
+    }
+    .nav.active .menu{
+       height: calc(100vh - 90px);
+       visibility: visible;
+       overflow-y: auto;
+    }
+
+ 
+    .btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        font-weight: bolder;
+    }
+
+    .hamburguer{
+        display: block;
+        width: 28px;
+        border-top: 2px solid;
+        position: relative;
+    }
+    .hamburguer::after, .hamburguer::before{ /*para elemetno afeter existir precisa passar um conteudo*/
+        content: '';
+        display: block;
+        width: 28px;
+        height: 2px;
+        background-color: currentColor; /*manter a cor do pai*/
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+        }
+
+    .nav.active .hamburguer{
+         border-top-color:transparent ;
+        }
+
+    .nav.active .hamburguer::after{
+            transform: rotate(45deg);
+            top: -6px;  /*top so funciona se a posição for relativo absoluto ou fixo*/
+        }
+    .nav.active .hamburguer::before{
+            transform: rotate(-45deg);
+            top: 0;  /*top so funciona se a posição for relativo absoluto ou fixo*/
+        }
+
+    }
+

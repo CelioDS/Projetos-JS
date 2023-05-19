@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f0f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+
+.btn.active,
+.btn:hover {
+  background-color: #666;
+  color: white;
+}
+
+.btn-mobile.active {
+  color: #f0f1f1;
+}
+
+.nav-link[aria-current="page"] {
+  color: rgb(255, 255, 255);
+  border: 2px solid black;
+}
+a{text-decoration:none;font-size:20px;color:#000;}.btn{border:none;outline:none;padding:10px 16px;background-color:#f0f1f1;cursor:pointer;font-size:18px;}.btn.active,.btn:hover{background-color:#666;color:white;}.btn-mobile.active{color:#f0f1f1;}.nav-link[aria-current="page"]{color:#fff;border:2px solid black;}

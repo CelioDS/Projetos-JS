@@ -1,0 +1,108 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(90deg, rgba(0, 255, 255, 0.329), rgba(17, 240, 210, 0.432));
+}
+
+.box {
+    display: block;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 83, 4);
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+
+fieldset {
+    display: block;
+    border: 1px solid black;
+}
+
+legend {
+    display: block;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    /* currentColor mantem a cor*/
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    color: black;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputUser:hover~.labelInput,
+.inputUser:focus~.labelInput,
+.inputUser:valid~.labelInput {
+    top: -20px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+#data_nascimento {
+    border: none;
+    padding: 8px;
+    border-radius: 15px;
+    outline: none;
+    font-size: 15px;
+}
+
+#submit {
+    width: 100%;
+    background: linear-gradient(90deg, rgb(150, 149, 149), white);
+    border: none;
+    padding: 15px;
+    color: black;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+#submit:hover {
+    background: linear-gradient(90deg, rgb(150, 149, 149, 0.8), rgb(255, 255, 255, 0.8));
+}
+
+
+
+/* Cor de fundo do autocomplete */
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    border-bottom: 1px solid black;
+    -webkit-text-fill-color: black !important;
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 83, 4) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}

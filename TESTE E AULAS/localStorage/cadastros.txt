@@ -1,0 +1,2 @@
+Nome: celio, Idade: 23
+Nome: celio, Idade: a

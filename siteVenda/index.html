@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script src="https://cdn.jsdelivr.net/gh/brunoalbim/devtools-detect/index.js"></script>
+  <script src="js/bloquear.js"></script>
+  <script src="js/swet.js"></script>
+  <title>Logo</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo digitação" href="#">Logo</a>
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a onclick="fecharmenu()" href="#inicio">Início</a></li>
+        <li><a onclick="fecharmenu()" href="#parâmetros">produtos</a></li>
+        <li><a onclick="fecharmenu()" href="#">Sobre <strong>US </strong> </a></li>
+        <li><a onclick="fecharmenu()" href="#footer">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+  <section id="inicio" class="padrao-section">
+    <div class="slide-principal">
+      <figure>
+        <img class="painel" src="img/background.jpg" alt="1" />
+        <figcaption class="text-center">1 primeira imagem</figcaption>
+      </figure>
+
+      <figure>
+        <img class="painel " src="img/background.jpg" />
+        <figcaption class="text-center">2 primeira imagem</figcaption>
+      </figure>
+
+      <figure>
+        <img class="painel" src="img/background.jpg" />
+        <figcaption class="text-center">3 primeira imagem</figcaption>
+
+      </figure>
+
+    </div>
+  </section>
+
+
+
+
+
+  <h1 class="text-center">SECTION GRID3</h1>
+  <section class="grid3 ">
+
+    <div class="grid3-item">
+      <img src="img/peixe.jpg">
+      <p>peixe 1</p>
+    </div>
+    <div class="grid3-item">
+      <img src="img/gear.jpg">
+      <p>peixe 1</p>
+    </div>
+    <div class="grid3-item">
+      <img src="img/workspace.jpg">
+      <p>peixe 1</p>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="about">
+    <div class="texto">
+      <h1>About <strong> US </strong></h1>
+      <h2> O que é o <strong>Lorem Ipsum</strong> ?</h2>
+      <p>
+        O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto
+        padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar
+        um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica,
+        mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de
+        Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o
+        Aldus PageMaker que incluem versões do Lorem Ipsum
+      </p>
+    </div>
+
+    <div class="imagem">
+      <figure>
+        <img src="img/monitor.png" alt="1" />
+        <figcaption class="text-center">1 primeira imagem</figcaption>
+
+      </figure>
+    </div>
+
+  </section>
+
+  <h1 class="text-center "> <strong>Marcas</strong> parceiras</h1>
+
+<section class="marcas  ">
+      <div>
+        <img title="logo"src="img/logo (1).png" alt="logo">
+      </div>
+      <div>
+        <img title="logo"src="img/logo (2).png" alt="logo">
+      </div>
+      <div>
+        <img title="logo"src="img/logo (3).png" alt="logo">
+      </div>
+      <div>
+        <img title="logo" src="img/logo (4).png" alt="logo">
+      </div>
+</section>
+
+
+
+  <section class="section-map padrao-section">
+    <aside class="texto-map">
+      <h1>Nossa <strong>localização </strong> </h1>
+      <h5>
+        <address>Av. Júlio Vasconcelos Bordon, 10, <strong>Central Park</strong>  Monte Mor - SP </address>
+      </h5>
+      <h5>
+        <address>CEP 13190.307</address>
+      </h5>
+
+      
+    </aside>
+
+    <iframe class="mapa"
+      src="https://www.google.com/maps/embed?pb=!4v1665710542834!6m8!1m7!1sB5mz6ORPsKib5iGMmf3tCw!2m2!1d-22.92884521336725!2d-47.2638754734152!3f39.931149435601064!4f0.6195627034159799!5f0.7820865974627469"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </section>
+
+<h1 class="text-center">Envie uma  <strong>mensagem para</strong> nos</h1>
+
+  <section class="campo-email padrao-section1" id="campo-email">
+ 
+    <form id="form" action="https://formsubmit.co/celio01t@gmail.com" method="POST">
+
+      <div class="inputBox">
+        <input class="inputUser" type="text" name="name" id="name" required maxlength="100" minlength="2">
+        <label class="labelInput" for="name">Seu nome</label>
+      </div>
+
+
+      <div class="inputBox">
+        <input class="inputUser" type="email" name="email" id="email" required maxlength="50">
+        <label class="labelInput" for="email">Seu Email</label>
+      </div>
+
+      <div class="inputBox">
+        <input class="inputUser" type="text" name="_subject" id="subject" required>
+        <label class="labelInput" for="subject">Assunto</label>
+      </div>
+
+      <div class="inputBox">
+        <textarea rows="5" class="inputUsers" type="text" name="message" id="message" required
+          maxlength="388"> </textarea>
+        <label class="labelInputs" for="message">mensagem</label>
+      </div>
+
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://vendasite.netlify.app/#footer" />
+
+
+      <div class="inputBox">
+        <button id="btn-email" onclick="avisoEmail()">Enviar</button>
+      </div>
+    </form>
+  </section>
+
+
+
+
+  <div>
+    <button id="btn-subir"class="btn-subir"><a href="#mobile-menu">Subir</a></button>
+  </div>
+
+
+  <footer id="footer" class="tema2">
+    <div class="card-footer text-center bg-dark  ">
+      <div class="card-header text-white ">
+        Nossas redes socias para contato
+      </div>
+      <div class="card-body">
+        <p title="email" class="email"><a href="mailto:celio01t@gmail.com"> <img src="img/email.png" alt="">
+            celio01t@gmail.com</a></p>
+        <a href="https://www.linkedin.com/in/c%C3%A9lio-da-silva-3b20131b7/" target="_blank"
+          rel="noopener noreferrer"><img class="rede" src="img/linkedin.png" alt="linkedin"></a>
+
+        <a href="https://github.com/CelioDS" target="_blank" rel="noopener noreferrer"><img class="rede"
+            src="img/git.png" alt="github"></a>
+
+        <a href="https://www.instagram.com/celio.thug/" target="_blank" rel="noopener noreferrer"><img class="rede"
+            src="img/instagram.png" alt="instagram"></a>
+      </div>
+      <div class="card-footer text-white ">
+        Criado e desenvolvido por <a href="https://www.linkedin.com/in/c%C3%A9lio-da-silva-3b20131b7/" target="_blank"
+          rel="noopener noreferrer">Célio</a>
+      </div>
+    </div>
+  </footer>
+  <!-- para baixar entra no link e copia e colar em uma pasta com o n4me-->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="js/slick.main.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

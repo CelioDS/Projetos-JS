@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    
+    <link rel="stylesheet" href="st.css">
+    <title>Mercado de oscilação</title>
+</head>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <h1>Active Button</h1>
+    <p>Highlight the active/current (pressed) button.</p>
+
+    <div id="myDIV">
+        <button class="btn active"><a href="#">1</a></button>
+        <button class="btn "><a href="#">2</a></button>
+        <button class="btn "><a href="#">3</a></button>
+        <button class="btn "><a href="#">4</a></button>
+        <button class="btn "><a href="#">5</a></button>
+    </div>
+
+    <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    
+    <nav class="nav" id="nav">
+        <button class="btn-mobile" id="btn-mobile">Menu
+            <span class="hamburguer" id="span"></span>
+        </button>
+
+        <ul class="menu">
+            <li><a href="#">Inicio</a> </li>
+            <li><a href="#">Ações</a> </li>
+            <li><a href="#">FIIS</a> </li>
+            <li><a href="#">Renda fixa</a> </li>
+        </ul>
+    </nav>
+
+    <div id="ativo">
+        <button aria-current="page"><a class="nav-link atv" href="#">1</a></button>
+        <button ><a class="nav-link atv" href="#">2</a></button>
+        <button ><a class="nav-link atv" href="#">3</a></button>
+        <button ><a class="nav-link atv" href="#">4</a></button>
+        <button ><a class="nav-link atv" href="#">5</a></button>
+    </div>
+<br>
+<script src="index.js"></script>
+</html>

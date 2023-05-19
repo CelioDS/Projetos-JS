@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.card-container{
+ 
+  perspective:700%;
+  background-image: linear-gradient(30deg, #ff0000, rgb(0, 0, 0));
+  width: 60%;  /*centralizando a imagem*/
+  margin: auto;
+  display: block;
+  width: 50vh;
+
+}
+
+.cardd{
+    margin-top: 100px;
+    height: 500px;
+    width: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform .75s cubic-bezier(0.4, 0.03, 0.5, 0.9); 
+ 
+}
+
+.card__image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  outline: 2px solid  rgb(0, 0, 0);
+  outline-offset: 5px;
+  backface-visibility: hidden;
+}
+
+.card__image:nth-child(2), 
+.cardd:hover{
+  transform: rotate3d(1, 1, 0, 180deg);
+}
+
+/*********************************************/
+.neon{
+  padding-top: 50px;
+  font-family: "Virbur", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  animation: pulsate 1s ease-in-out infinite alternate;
+
+}
+
+@keyframes pulsate{
+  100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(rgb(255, 0, 0)),
+        0 0 80px rgb(255, 0, 0),
+        0 0 90px rgb(255, 0, 0),
+        0 0 100px rgb(255, 0, 0),
+        0 0 150px rgb(255, 0, 0),
+      }
+
+     0% {
+        text-shadow:
+          0 0 4px #fff,
+          0 0 10px #fff,
+          0 0 18px #fff,
+          0 0 38px rgb(255, 0, 0),
+          0 0 73px rgb(255, 0, 0),
+          0 0 80px rgb(255, 0, 0),
+          0 0 97px rgb(255, 0, 0),
+          0 0 140px rgb(255, 0, 0)
+        }
+}
+
+
+
+.imagem{
+  position: relative;
+  width: 400px;
+  height: 250px;
+  border-radius: 20px;
+  background-image:  url(/img/peixe2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.imagem::before, .reflexo .imagem::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  bottom: -230px;
+  border-radius: inherit;
+  position:absolute;
+}
+.imagem::before{
+  background: inherit;
+  opacity: .3;
+  transform: scaleY(-1)}
+
+.imagem::after{
+  background: linear-gradient(0deg, #fff 5%,
+  #ffffff00 100%
+  );
+  
+}
+
+
+
+.center{
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  place-items: center;
+  vertical-align: center;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 50%);
+  }

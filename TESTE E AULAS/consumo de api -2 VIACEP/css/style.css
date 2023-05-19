@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+}
+
+body{
+    padding: 15px;
+}
+
+.hide{
+    display: none;
+}
+a, input[type="submit"]{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+
+}
+
+#loading{  
+    color: #000;
+}
+
+#posts-container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#posts-container div{
+
+    background-color: rgb(213, 213, 216);
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+#post-container{
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ccc;
+}
+#coments-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#coments-container div {
+    background-color: rgb(213, 213, 216);
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+#comment-form{
+    background-color: #ccc;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ccc;
+}
+form div {
+   display: flex;
+   flex-direction: column;
+   margin: 10px;
+   
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.3em;
+ }
+
+ form input,
+ form textarea {
+    padding: 10px;
+    color: #000;
+ }
+

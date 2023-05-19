@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</head>
+<body>
+
+
+<form action="">
+  <label for="fname">quando digitar</label>
+  <input type="text" id="fname" name="fname" onkeyup="showHint1(this.value)">
+<br>
+<br>
+
+  <label for="fname">quando sai do input</label>
+  <input type="text" id="fname" name="fname" onchange="showHint2(this.value)">
+</form>
+<p>onkeyup: <span id="txtHint1"></span></p>
+<p>onchage: <span id="txtHint2"></span></p>
+</body>
+<script src="script.js"></script>
+</html>

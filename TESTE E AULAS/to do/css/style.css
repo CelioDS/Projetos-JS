@@ -1,0 +1,153 @@
+/* geral formatação*/
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box; /*nao deixa o conteudo sair*/
+}
+
+/*Centraliza o conteudo*/
+body{
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(90deg,rgb(153, 152, 152),rgb(192, 192, 192));
+}
+
+button{
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid rgb(0, 0, 255,0.7);
+    padding: .0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+}
+
+#edit-form button:nth-child(3){
+width: 100px;
+}
+
+
+button:hover{
+    transition: 1s;
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+button div{
+ pointer-events: none;
+}
+
+input, select{
+padding: 0.25rem 0.5rem;
+}
+.hide{
+    display: none;
+}
+
+/* todo header*/
+.todo-container{
+    max-width: 450px;
+    margin:  1rem auto 0; 
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.todo-container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* todo form*/
+#todo-form, #edit-form{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+#todo-form p, #edit-form p {
+ margin-bottom: 0.5rem;
+ font-weight: bolder;
+}
+
+.form-control{ 
+    display: flex;
+}
+.form-control input{ 
+ margin-right: 0.3rem;
+}
+
+#cancel-edit-btn{
+    margin-top: 1rem;
+}
+
+/* todo bar*/
+
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom:.5rem;
+}
+
+#search{
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+#search input{
+   margin-right: 0.3rem;
+   width: 100%;
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select{ 
+    flex: 1;/* ocupa todo espaço*/
+}
+
+/* todo lista */
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* centralizar na vertical*/
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+ 
+.todo h3{
+    font-size: 0.9rem;
+    flex: 1; 
+}
+.todo button{
+    margin-left: 0.3rem;
+}
+
+.done {
+    background-color: grey;
+    color: #fff;
+    font-style: italic;
+}
+
+.done h3{
+    text-decoration: line-through;
+}

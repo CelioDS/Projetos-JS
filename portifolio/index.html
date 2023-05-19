@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094467641082217"
+    crossorigin="anonymous"
+  ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="img/as.ico" type="image/x-icon" />
+    <script src="js/swet.js" defer></script>
+
+    <!-- Biblioteca do jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Biblioteca do Slick Carousel -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    ></script>
+
+    <!--- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6HBH3R4M7D"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-6HBH3R4M7D");
+    </script>
+
+
+
+    <title>Celio</title>
+    <meta
+      name="description"
+      content="Sou desenvolver Web com experiência em sites usando html, css, javaScript e php. Esse é o meu portfólio como desenvolvedor web. Confira meu portfólio agora!"
+    />
+    <meta
+      name="keywords"
+      content="portfólio, desenvolvimento web, programação,html, css, javaScript, php, celio"
+    />
+    <meta name="author" content="Célio da silva, celio da silva" />
+  </head>
+
+  <body>
+    <header id="logo">
+      <nav>
+        <a class="logo" id="Digitalização" href="#">CeLio</a>
+
+        <div class="mobile-menu" id="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+
+        <ul class="nav-list">
+          <li class="activePai">
+            <a class="menu active" onclick="fecharmenu()" href="#home"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a class="menu" onclick="fecharmenu()" href="#about">Sobre</a>
+          </li>
+          <li>
+            <a class="menu" onclick="fecharmenu()" href="#portifolio"
+              >Projetos</a
+            >
+          </li>
+          <li>
+            <a class="menu" onclick="fecharmenu()" href="#campo-email"
+              >contatos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="container">
+      <div>
+        <h1>Olá, eu sou o <strong>Célio</strong>.</h1>
+        <p>
+          Atualmente estou estudando para me tornar um desenvolvedor full Stack.
+        </p>
+        <p class="pos">
+          Tenho curiosidade e muita vontade de aprender, sou apaixonado por tudo
+          que envolva ciência e tecnologia.
+        </p>
+      </div>
+
+    
+
+      <h5>linguagem e framework</h5>
+      <div  id="carousel" class="linguagens-utilizadas slick-carousel">
+        <!--imagem estao sendo exportado pelo js em um forEach-->     
+      </div>
+
+
+
+      <section class="card-container">
+        <article class="cardd">
+          <img
+            class="card__image"
+            src="img/Sem título_5.webp"
+            alt="front-card"
+          />
+          <img
+            class="card__image"
+            src="img/WhatsApp Image 2022-11-25 at 12.25.35_8_11zon.webp"
+            alt="back-card"
+          />
+        </article>
+      </section>
+    </section>
+
+    <section id="about">
+      <div class="container aboutme">
+        <div>
+          <h1>Sobre mim</h1>
+          <p>Sou formado em Análise e Desenvolvimento de Sistemas.</p>
+          <p class="pos">
+            Estou fazendo Pos-Graduação em Ciências de Dados e Inteligência
+            Artificial.
+          </p>
+        </div>
+        <div>
+          <a
+            href="arquivos/celiodasilva.pdf"
+            download
+            id="btn"
+            title="baixar curriculo"
+            >Download CV</a
+          >
+        </div>
+      </div>
+
+      <section class="sectionJob">
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('education')">
+            <button class="btn-job">Formações</button>
+          </p>
+          <p class="tab-links" onclick="opentab('experiencia')">
+            <button class="btn-job">Experiência</button>
+          </p>
+          <p class="tab-links" onclick="opentab('habilidade')">
+            <button class="btn-job">Habilidades</button>
+          </p>
+        </div>
+
+        <div class="tab-contents" id="habilidade">
+          <ul>
+            <li><span>html css </span><br />FrondEnd simples.</li>
+            <li><span>html css js</span><br />FrontEnd.</li>
+            <li><span>html css js php</span><br />FrontEnd e BackEnd.</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experiencia">
+          <ul>
+            <li><span>Site sobre peixes</span><br />Html, Css e javascript.</li>
+            <li>
+              <span>Jogo </span><br />Html, Css, javascript, Php, SQl e Banco de
+              dados.
+            </li>
+            <li>
+              <span>site de login e cadastro de cliente </span><br />Html, Css,
+              javascript, Php, SQl e Banco de dados. E api Viacep e SwetAlet.
+            </li>
+          </ul>
+        </div>
+        <div class="tab-contents active-tab" id="education">
+          <ul>
+            <li>
+              <span>Analise e Desenvolvimento de Sistemas</span><br />html, Css,
+              JavaScript, Php, Python, Banco de dados, Sap e ERP.
+            </li>
+            <li>
+              <span>Analise de dados</span><br />
+              Sql e analise de dados.
+            </li>
+            <li><span>ingles</span><br />Intermediario.</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+    <section id="portifolio">
+      <div class="container" id="services">
+        <h1 class="sub-title">Projetos</h1>
+        <div class="work-list">
+          <div class="work">
+            <legend>Site com login e CRUD</legend>
+            <img src="img/bancodedados_1_11zon.webp" alt="bancodedados" />
+            <div class="layer">
+              <p>
+                login e cadastro de usuario. <br />
+                CRUD completo para administrador
+              </p>
+              <div class="linguagem">
+                <ul>
+                  <li>sweetalert2</li>
+                  <li>javascript</li>
+                  <li>viacep</li>
+                  <li>html</li>
+                  <li>php</li>
+                  <li>css</li>
+                  <li>sql</li>
+                </ul>
+                <div>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="acessar site aqui"
+                  >
+                    <i class="bi bi-link-45deg"></i
+                  ></a>
+                  <p>Acessar aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <legend>jogo Run</legend>
+            <img src="img/jogotrol_3_11zon.webp" alt="jogo trol" />
+            <div class="layer">
+              <p>
+                o intuito do jogo é correr e pular os canos. <br />
+                O mesmo conta com um ranking local e um ranking global.
+              </p>
+              <div class="linguagem">
+                <ul>
+                  <li>javascript</li>
+                  <li>html</li>
+                  <li>php</li>
+                  <li>css</li>
+                  <li>sql</li>
+                </ul>
+                <div>
+                  <a
+                    href="http://jogotrol.space/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="acessar site aqui"
+                  >
+                    <i class="bi bi-link-45deg"></i
+                  ></a>
+                  <p>Acessar aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <legend>site sobre computador</legend>
+            <img src="img/site novo_6_11zon.webp" alt="site sobre computador" />
+            <div class="layer">
+              <p>
+                O site consiste em explicar Sobre computador, periféricos e
+                componentes..
+              </p>
+              <div class="linguagem">
+                <ul>
+                  <li>javascript</li>
+                  <li>html</li>
+                  <li>css</li>
+                </ul>
+
+                <div>
+                  <a
+                    href="https://multiversion.tech/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="acessar site aqui"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                  <p>Acessar aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <legend>Site para conferir o clima com API</legend>
+            <img src="img/api.webp" alt="clima" />
+            <div class="layer">
+              <p>
+                Confere o clima da cidade atual do usuario ou pode pesquisar
+              </p>
+              <div class="linguagem">
+                <ul>
+                  <li>consumo de API</li>
+                  <li>javascript</li>
+                  <li>html</li>
+                  <li>css</li>
+                </ul>
+                <div>
+                  <a
+                    href="https://climacidade.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="acessar site aqui"
+                  >
+                    <i class="bi bi-link-45deg"></i
+                  ></a>
+                  <p>Acessar aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <legend>Site de uma loja de eletronicos</legend>
+            <img src="img/japa_2_11zon.webp" alt="site de loja" />
+            <div class="layer">
+              <p>Loja fisica de eletronicos</p>
+              <div class="linguagem">
+                <ul>
+                  <li>javascript</li>
+                  <li>html</li>
+                  <li>css</li>
+                </ul>
+
+                <div>
+                  <a
+                    href="https://japaeletronico.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="acessar site aqui"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                  <p>Acessar aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <legend>site de peixes</legend>
+            <img src="img/peixe_4_11zon.webp" alt="site sobre peixe" />
+            <div class="layer">
+              <p>O site é sobre peixes em aquario e tem envio de email.</p>
+              <div class="linguagem">
+                <ul>
+                  <li>sweetalert2</li>
+                  <li>javascript</li>
+                  <li>html</li>
+                  <li>css</li>
+                </ul>
+
+                <div>
+                  <a
+                    href="https://peixescuidados.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="acessar site aqui"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                  <p>Acessar aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <legend>Site modelo para venda</legend>
+            <img src="img/sitevenda_7_11zon.webp" alt="site modelo" />
+            <div class="layer">
+              <p>site conta com envio de email, slide, fotos e mapa.</p>
+              <div class="linguagem">
+                <ul>
+                  <li>sweetalert2</li>
+                  <li>javascript</li>
+                  <li>html</li>
+                  <li>css</li>
+                </ul>
+                <div>
+                  <a
+                    href="https://vendasite.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="acessar site aqui"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                  <p>Acessar aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <legend>Site sobre investimento e acoes</legend>
+            <img src="img/acoes.PNG" alt="site acoes" />
+            <div class="layer">
+              <p>sobre ações e investimentos</p>
+              <div class="linguagem">
+                <ul>
+                  <li>javascript</li>
+                  <li>html</li>
+                  <li>css</li>
+                </ul>
+                <div>
+                  <a
+                    href="https://bolsadevalores.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="acessar site aqui"
+                  >
+                    <i class="bi bi-link-45deg"></i
+                  ></a>
+                  <p>Acessar aqui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h1 id="contact" class="text-center">contate <strong>me</strong>.</h1>
+
+    <section id="campo-email" class="campo-email padrao-section1">
+      <div class="envioEmail">
+        <form
+          id="form"
+          action="https://formsubmit.co/celio01t@gmail.com"
+          method="POST"
+        >
+          <div class="inputBox">
+            <input
+              class="inputUser"
+              type="text"
+              name="name"
+              id="name"
+              required
+              maxlength="100"
+              minlength="2"
+            />
+            <label class="labelInput" for="name">Seu nome</label>
+          </div>
+
+          <div class="inputBox">
+            <input
+              class="inputUser"
+              type="email"
+              name="email"
+              id="email"
+              required
+              maxlength="50"
+            />
+            <label class="labelInput" for="email">Seu Email</label>
+          </div>
+
+          <div class="inputBox">
+            <input
+              class="inputUser"
+              type="text"
+              name="_subject"
+              id="subject"
+              required
+            />
+            <label class="labelInput" for="subject">Assunto</label>
+          </div>
+
+          <div class="inputBox">
+            <textarea
+              rows="5"
+              class="inputUsers"
+              type="text"
+              name="message"
+              id="message"
+              required
+              maxlength="388"
+            >
+            </textarea>
+            <label class="labelInputs" for="message">Mensagem</label>
+          </div>
+
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://celio.tech/#contact"
+          />
+
+          <div class="inputBox">
+            <button id="btn-email" onclick="avisoEmail()">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="contatos">
+        <a href="mailto:celio01t@gmail.com"
+          ><img src="img/email1.png" alt="email" title="contatos aqui" />
+          celio01t@gmail.com</a
+        >
+
+        <a
+          href="https://www.linkedin.com/in/c%C3%A9lio-da-silva-3b20131b7/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="contatos aqui"
+          ><img class="rede" src="img/linkedin.png" alt="linkedin" />Linkedin</a
+        >
+
+        <a
+          href="https://github.com/CelioDS"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="contatos aqui"
+          ><img class="rede" src="img/git.png" alt="github" />Github</a
+        >
+
+        <a
+          href="https://www.linkedin.com/in/c%C3%A9lio-da-silva-3b20131b7/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="contatos aqui"
+          >Criado e desenvolvido por Célio</a
+        >
+      </section>
+    </section>
+
+    <div>
+      <a id="btn-subir" href="#logo">
+        <i class="bi bi-rocket">
+          <span class="bi-rocket-fill2"></span>
+        </i>
+      </a>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/brunoalbim/devtools-detect/index.js"></script>
+  </body>
+</html>

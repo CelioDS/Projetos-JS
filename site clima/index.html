@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7094467641082217"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/as.ico" type="image/x-icon" />
+
+    <!--- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y6DKVL3KR5"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Y6DKVL3KR5");
+    </script>
+
+    <title>Clima</title>
+    <meta
+      name="description"
+      content="site sobre clima, digite sua cidade e o clima da cidade aparece"
+    />
+    <meta
+      name="keywords"
+      content="cidade, clima, temperatura, chuva, sol, tempo,monte mor, celio"
+    />
+    <meta name="author" content="Célio da silva, celio da silva" />
+  </head>
+
+  <body>
+    <img src="" id="background" alt="" crossorigin="anonymous" class="hide" />
+    <div class="container">
+      <div class="form">
+        <h3>Confirar o clima de uma cidade</h3>
+        <div class="form-input-container">
+          <input
+            type="text"
+            placeholder="Digite o nome da cidade..."
+            id="city-input"
+          />
+          <button id="search" disabled>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="cep-div">
+        <form action="" class="cep-form">
+          <input
+            type="number"
+            min="9"
+            max="9"
+            name="cep"
+            id="cep"
+            placeholder="Digite seu cep..."
+          />
+          <label for="cep">CEP</label>
+        </form>
+      </div>
+
+      <div class="seu-local">
+        <p>Sua cidade: <span class="local-city"></span></p>
+        <p>Seu Cep :<span class="local-cep"></span></p>
+      </div>
+
+      <div class="erro hide">
+        <h3>
+          Verifique o <span class="nome-erro">nome</span>, está
+          <span>incorreto!</span>
+        </h3>
+      </div>
+      <div id="weather-data" class="hide">
+        <h2>
+          <i class="fa-solid fa-location-dot"></i>
+          <span id="city"></span>
+          <img
+            src="https://img.icons8.com/stickers/100/null/progress-indicator.png"
+            alt="country-icon"
+            id="country"
+          />
+        </h2>
+        <p id="temperature"><span>0</span>&deg;C</p>
+        <div id="description-container">
+          <p id="description"></p>
+          <img
+            src="https://img.icons8.com/ios-glyphs/30/null/rainy-weather.png"
+            alt="Weather-icon"
+            id="weather-icon"
+          />
+        </div>
+        <div id="details-container">
+          <p id="humidity">
+            <i class="fa-solid fa-droplet"></i>
+            <span>0%</span>
+          </p>
+
+          <p id="wind">
+            <i class="fa-solid fa-wind"></i>
+            <span>0km/h</span>
+          </p>
+        </div>
+
+        <ul id="lista-cidades"></ul>
+      </div>
+    </div>
+    <footer id="footer">
+      <div>
+        <h2>Contatos</h2>
+        <a href="mailto:celio01t@gmail.com"
+          ><i class="bi bi-envelope"></i>
+          <p>Email</p>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/c%C3%A9lio-da-silva-3b20131b7/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bi bi-linkedin"> </i>
+          <p>Linkedin</p>
+        </a>
+
+        <a
+          href="https://github.com/CelioDS"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bi bi-github"></i>
+          <p>Github</p>
+        </a>
+      </div>
+
+      <div>
+        <p>Copyright © <span id="ano"></span> - Todos os direitos reservados</p>
+        <p>
+          Projeto como base
+          <a href="https://www.youtube.com/@MatheusBattisti"
+            >@MatheusBattisti</a
+          >
+        </p>
+
+        <a href="https://celio.tech/" target="_blank" rel="noopener noreferrer"
+          >Criado e desenvolvido por Célio</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "nome": "celio",
+    "profissao": "programador",
+    "estaTrabalhando": "true",
+    "detalhesProfissao": {
+        "profissaoA": "programador",
+        "empresa": "ibm"
+    },
+    "hobbies": [
+        "programar",
+        "academia"
+    ],
+    "": ""
+}
