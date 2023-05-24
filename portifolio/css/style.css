@@ -161,7 +161,7 @@ nav {
     z-index: 100 !important;
     justify-content: space-around;
     align-items: center;
-    background: #030a2e;
+    background: #1f1e1e;
     height: 60px;
     border-radius: 0px 0px 0px 10px;
   }
@@ -176,8 +176,8 @@ nav {
     top: 60px;
     right: 0;
     width: 50vw;
-    height: 82vh;
-    background: #030a2e;
+    height: 52vh;
+    background: inherit;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -224,7 +224,6 @@ nav {
     transform: rotate(45deg) translate(-5px, -7px);
   }
 
-
   /*tirando estilo de ativo*/
   .nav-list li {
     border: none;
@@ -238,7 +237,6 @@ nav {
     /* link ativo*/
     background-color: transparent !important;
   }
-  
 }
 
 /************* inicio ************************ inicio **********/
@@ -246,13 +244,11 @@ nav {
   margin-top: 130px;
   color: #020202;
   width: 100%;
-  min-height: 90vh;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 30px;
 }
 #home div {
   margin-bottom: 30px;
@@ -269,7 +265,6 @@ nav {
   #home {
     flex-direction: column;
     justify-content: start;
-    height: 81vh;
   }
 }
 
@@ -317,22 +312,30 @@ nav {
 }
 
 /********************** img flip ***************************************/
+.fotoM {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 50px;
+}
 
 .card-container {
   width: 180px;
   display: block;
   background-color: #dcf0f8;
+  position: relative;
 }
 
 .cardd {
   height: 250px;
   transform-style: preserve-3d;
   position: relative;
-  transition: transform 0.5s cubic-bezier(0.4, 0.03, 0.5, 0.9);
+  transition: transform 0.5s;
   cursor: pointer;
 }
 
 .card__image {
+  margin-bottom: 50px;
   width: 180px;
   height: 250px;
   position: absolute;
@@ -357,7 +360,7 @@ nav {
 
 #about {
   background-color: #6f8d7994;
-  height: auto;
+  min-height: 70vh;
   position: relative;
   color: #000000;
   display: flex;
@@ -560,7 +563,7 @@ nav {
 .work img {
   width: 80%;
   height: 80%;
-  margin:  0 auto;
+  margin: 0 auto;
   border-radius: 10px;
   display: block;
   transition: trasform 0.5s;
@@ -591,14 +594,14 @@ nav {
   color: #051a53;
   font-size: 1.1rem;
   line-height: 16px;
-  border-bottom:1px solid #ffffff ;
+  border-bottom: 1px solid #ffffff;
   width: 80%;
   padding-bottom: 15px;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 
 .layer a {
-  color: #ffffff ;
+  color: #ffffff;
   text-decoration: none;
   font-size: 28px;
   background-color: #0088ff;
@@ -650,7 +653,6 @@ nav {
 .linguagem li {
   line-height: 15px;
   list-style: none;
-
 }
 
 .linguagem li,
@@ -691,7 +693,8 @@ nav {
   flex-direction: row-reverse;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(29, 27, 27);
+  background: #1f1e1e;
+
   width: 100%;
   position: relative;
   padding: 30px 0;
@@ -852,7 +855,6 @@ input:-webkit-autofill:focus {
   border-radius: 15px;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  
 }
 
 .campo-email button:hover {
