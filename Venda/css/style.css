@@ -1,0 +1,428 @@
+:root {
+  --color-p: #0a315e;
+  --containerSize: 1100px;
+  --navSize: 60px;
+  --navColor: #dfcaca;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", "sans-serif";
+  font-size: clamp(14px, 2vw, 16px);
+  word-break: break-all; /*Quebra as letras caso seja menor*/
+  list-style: none;
+}
+p::first-letter,
+h1::first-letter {
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  background-color: #f7d7d7;
+  align-items: center;
+  color: #946969;
+  background-color: var(--navColor);
+}
+header nav {
+  display: flex;
+  width: var(--containerSize);
+  margin: 0 auto;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+header nav .btn-menu {
+  display: none;
+}
+@media (max-width: 900px) {
+  .hidden {
+    display: none;
+  }
+  #menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #menu i {
+    font-size: 40px;
+  }
+  #menu-mobile {
+    position: absolute;
+    flex-direction: column;
+    top: var(--navSize);
+    right: 0;
+    width: 50%;
+    background-color: var(--navColor);
+    z-index: 100;
+    text-align: center;
+    padding: 15px;
+  }
+
+  header nav .btn-menu {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    margin-right: calc(50% - 25% - 25px);
+  }
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.container {
+  max-width: var(--containerSize);
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+#inicio {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 80vh;
+  height: auto;
+  color: #ffffff;
+  text-align: center;
+}
+#inicio div:nth-child(1) {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+
+  align-items: center;
+  width: 100%;
+}
+
+#inicio figure {
+  position: relative;
+}
+#inicio figure img {
+  background-image: url("/img/endless-constellation.svg");
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-attachment: fixed;
+}
+
+#inicio figure figcaption {
+  position: absolute;
+  font-size: clamp(38px, 5vw, 58px);
+  color: #0072dd;
+  right: 10px;
+  top: 100px;
+}
+#inicio figure figcaption span {
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: normal;
+  color: #f7dbdb;
+}
+#inicio p {
+  width: 100%;
+  max-width: var(--containerSize);
+  margin: 0 auto;
+  padding: 0 15px;
+  color: #000;
+}
+
+/***********sobre*/
+#sobre {
+  color: white;
+}
+#sobre .color-p {
+  background-color: var(--color-p);
+  box-shadow: 0px 0px 0px 100px var(--color-p);
+  border: none;
+  padding: 15px;
+  margin: 0 !important;
+}
+
+#sobre h1,
+#sobre h1 > span {
+  color: #0066ff;
+  font-size: 38px;
+}
+#sobre h1 span {
+  font-style: italic;
+}
+
+/******CSS GRID3 galerry*/
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin: 0 auto;
+  max-width: var(--containerSize);
+}
+
+#gallery img {
+  width: 100%;
+}
+
+#contatos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  gap: 15px;
+  margin: 30px 0;
+  width: 100%;
+  background-color: #4d4a4a;
+  color: white;
+  background-image: url("/img/52f512f99b64f3c5d2ec9441cd7a3fd6.jpg");
+  background-attachment: fixed;
+}
+#contatos > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  min-height: 500px;
+  text-align: start;
+  padding: 0 15px;
+}
+#contatos > div h1 {
+  padding: 0 !important;
+  font-size: clamp(14px, 5vw, 38px) !important;
+  background-color: rgb(121, 96, 96);
+  border-radius: 50px 0px 50px 0px;
+  text-align: center;
+}
+#contatos > div > div > a {
+  color: #81807a;
+}
+#contatos > div > div > a > i {
+  color: #ffc400;
+  padding-left: 12px;
+  padding-right: 5px;
+}
+
+#contatos > div > form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  min-height: 500px;
+  justify-content: space-around;
+  align-items: center;
+}
+#contatos > div > form > div {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+}
+#contatos > div > form > div > label {
+  display: flex;
+  width: 100%;
+  max-width: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+#contatos > div > form > div > input {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+#contatos > div > form > div > textarea {
+  outline: none;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  resize: none;
+}
+#contatos > div > form > div:nth-child(4) label {
+  align-items: center;
+  margin: 0 auto;
+}
+#contatos > div > form > div > button {
+  padding: 15px;
+  background-color: #517597;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#contatos > div > form > div > button:hover {
+  padding: 15px;
+  background-color: #0084ff;
+  color: #ffffff;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+#contatos .redes-sociais {
+  color: #6e4e11;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 35.8px;
+  border-bottom: 1px solid #ccc;
+}
+#contatos .redes-sociais > a:nth-child(2) i {
+  text-align: center;
+  color: #72197a;
+  font-size: 18px;
+}
+#contatos .redes-sociais > a:nth-child(3) i {
+  text-align: center;
+  color: #0084ff;
+  font-size: 18px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border-bottom: 1px solid rgb(0, 26, 255);
+  -webkit-text-fill-color: inherit !important;
+  box-shadow: 0 0 0 1000px rgba(255, 84, 4, 0);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#subir {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 35px;
+  right: 15px;
+  text-align: center;
+  visibility: hidden;
+  filter: drop-shadow(8px 8px 4px rgb(0, 0, 0));
+  z-index: 10;
+  outline: none;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  animation: up 1s infinite linear;
+}
+#subir i {
+  font-size: 28px;
+  color: #000000;
+}
+@keyframes up {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  #inicio {
+    padding: 15px;
+  }
+  #contatos {
+    flex-direction: column;
+  }
+  #contatos > div {
+    width: 100%;
+  }
+  #contatos > div form {
+    background-color: #b6a7a7a8;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  #inicio div:nth-child(1) {
+    flex-direction: column;
+  }
+  #inicio figure img {
+    width: 250px;
+    height: 250px;
+  }
+  #gallery {
+    padding: 15px;
+  }
+}
+
+/******************* footer***********************/
+
+footer {
+  background-color: #5e5656;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 70px;
+  flex-direction: column;
+  /* min     ideal      max   */
+  font-size: clamp(12px, 2vw, 14px);
+}
+footer a {
+  text-decoration: none;
+}
+
+footer div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #c4b586;
+  height: 35px;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+}
+footer div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  align-items: center;
+}
+footer div:nth-child(1) a {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  color: #4d4a4a;
+  gap: 10px;
+}
+footer div:nth-child(1) a:hover {
+  color: #947614;
+}
+footer div:nth-child(2) {
+  display: flex;
+  color: #ccc;
+}
+footer div:nth-child(2) a {
+  color: #ccc;
+}
+footer div:nth-child(2) span {
+  color: #ffc400;
+}

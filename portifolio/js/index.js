@@ -115,7 +115,7 @@ function validar(email) {
 }
 
 // avisa o envio do email
-function avisoEmail() {
+function avisoEmail(e) {
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var subject = document.getElementById("subject").value;
@@ -132,6 +132,7 @@ function avisoEmail() {
       });
     }
   }
+  window.location.href = "https://celiotech.netlify.app/#contact";
 }
 
 /****************  fixa menu******************/

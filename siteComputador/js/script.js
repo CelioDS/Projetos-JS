@@ -79,7 +79,7 @@ function menuAtivo(listaBotao) {
       const elemento = event.target || event.srcElement;
       const childerElemento = elemento.parentElement.children[0];
 
-      const elementoHref = elemento.getAttribute("href").replace("#", "");
+      const elementoHref = elemento.getAttribute("href")
 
       listaBotao.forEach((botao) => {
         if (botao === elementoHref) {
