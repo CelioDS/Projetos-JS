@@ -14,10 +14,9 @@ function setFooter() {
   const setDo = document.getElementById("set-do");
 
   const sobre = document.getElementById("sobre");
-  const paragrafoSobre = sobre.querySelector("p");
+  const paragrafoSobre = sobre.querySelector("article");
   const trabalhos = document.getElementById("trabalho");
   const paragrafoTrabalhos = trabalhos.querySelector("p");
-
 
   setAbout.appendChild(paragrafoSobre.cloneNode(true));
   setDo.appendChild(paragrafoTrabalhos.cloneNode(true));
@@ -97,12 +96,10 @@ function CheckOpen() {
     horario.innerHTML = " <i class='bi bi-calendar2-check'></i> Aberto Agora";
     horario.style.color = "#00ff4c";
     horario.style.border = "1px solid  #099e09c4";
-    horario.style.backgroundColor = "#000000";
   } else {
     horario.innerHTML = " <i class='bi bi-calendar-x'></i> Fechado Agora";
     horario.style.color = "#ff0000 ";
     horario.style.border = "1px solid #ad2828c4";
-    horario.style.backgroundColor = "#000000";
   }
 }
 
@@ -170,7 +167,7 @@ function ativarLink() {
 
   links.forEach((link) => {
     var sectionLinkId = link.getAttribute("href");
-    var section = document.querySelector(sectionLinkId);
+    let section = document.querySelector(sectionLinkId);
     var rect = section.getBoundingClientRect();
 
     var sectionCenter = rect.top + rect.height / 2; // Obtém o centro da seção
@@ -183,6 +180,7 @@ function ativarLink() {
     ) {
       linkCentro = link; // Atualiza o link central
       distanciaCentro = Math.abs(sectionCenter - windowCenter); // Atualiza a distância do link ao centro
+      document.title = `Algemas de ouro - ${section.id}`;
     }
   });
 

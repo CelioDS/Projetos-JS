@@ -2,8 +2,8 @@
   --navSize: 60px;
   --navColor: #1f1e1d;
   --corFirst: #0084ff;
-  --corsobre: linear-gradient(90deg, #0084ff,#1f1e1d);
-  --corsobre0: #dadddf;
+  --corsobre: linear-gradient(90deg, #0084ff, #1f1e1d);
+  --corsobre0: #f0f0f0;
   --containerSize: 1200px;
   --corSecond: #ffd700;
 }
@@ -23,7 +23,9 @@ p::first-letter {
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 30px;
+
+  scroll-padding-top: 90px !important;
+
   position: relative;
 }
 a {
@@ -53,7 +55,7 @@ header img {
   align-items: center; /* Centraliza verticalmente */
   color: #ffffff;
   background-color: var(--navColor);
-  filter: drop-shadow(5px 5px 5px #858282);
+  filter: drop-shadow(3px 3px 3px #2b2a2a);
   z-index: 1055;
   margin-bottom: 10px;
 }
@@ -110,7 +112,6 @@ h1 {
   min-height: 100vh;
   padding: 8px;
   position: relative;
-  background-image: url("/img/");
 }
 
 #inicio > span {
@@ -133,7 +134,10 @@ h1 {
 #inicio > div > article > h1 {
   color: var(--navColor);
   font-size: clamp(24px, 2vw, 38px);
+  text-align: center;
   margin-bottom: 20px;
+  background-color: rgb(0, 30, 85);
+  padding: 5px;
 }
 #inicio div article h1 span {
   font-size: clamp(24px, 2vw, 38px) !important;
@@ -151,16 +155,21 @@ h1 {
 }
 #inicio > div > article > button {
   padding: 8px 16px;
-  background-color: var(--navColor);
+  background-color: var(--corFirst);
+
   border: none;
   width: 120px;
   border-radius: 3px;
 }
 #inicio > div > article > button:hover a {
-  color: var(--corSecond);
+  color: var(--corFirst);
+  background-color: var(--corSecond);
+}
+#inicio > div > article > button:hover {
+  background-color: var(--corSecond);
 }
 #inicio > div > article > button a {
-  color: #fff;
+  color: var(--corSecond);
 }
 
 #inicio > div > figcaption > img {
@@ -172,6 +181,21 @@ h1 {
   transform: rotateY(180deg);
   pointer-events: none;
   filter: drop-shadow(5px 5px 5px #858282);
+}
+#inicio > div > figcaption {
+  position: relative;
+}
+
+#inicio > div > figcaption::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  top: 100px;
+  right: -370px;
+  height: 10px;
+  background-image: linear-gradient(150deg, var(--corFirst), var(--corSecond));
+  filter: drop-shadow(5px 5px 5px #424242);
+  transform: rotate(45deg);
 }
 /****************** sobre *****************/
 #sobre {
@@ -211,7 +235,6 @@ h1 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -219,7 +242,7 @@ h1 {
   border-radius: 8px 8px 0 0;
   background-image: var(--corsobre);
 }
-#sobre div > p {
+#sobre div > article {
   text-align: justify;
   margin-top: 30px;
   padding: 8px;
@@ -242,7 +265,7 @@ h1 {
   width: 150px;
   color: var(--corSecond);
   padding: 8px;
-  filter: drop-shadow(2px 2px 5px #858282);
+  filter: drop-shadow(5px 5px 5px #000000);
   background-color: rgba(255, 255, 255, 0.075);
 
   /* Aplicar o efeito de desfoque */
@@ -251,6 +274,10 @@ h1 {
 /****************** trabalhos *****************/
 
 #trabalho {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   text-align: center;
   padding: 30px 0;
 }
@@ -290,7 +317,7 @@ h1 {
 }
 
 /****************** beneficios *****************/
-#trabalho .beneficios {
+#beneficios {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -301,30 +328,30 @@ h1 {
   padding: 30px 0;
   margin: 30px 0;
 }
-#trabalho .beneficios h1 {
+#beneficios h1 {
   margin-bottom: 30px;
 }
-#trabalho .beneficios article > div p,
-#trabalho .beneficios article > div h2,
-#trabalho .beneficios article > div h3 {
+#beneficios article > div p,
+#beneficios article > div h2,
+#beneficios article > div h3 {
   color: #6e6b6b;
 }
-#trabalho .beneficios article > div i {
+#beneficios article > div i {
   color: var(--corSecond);
   font-size: 38px;
   filter: drop-shadow(3px 3px 6px #fdfdfd);
 }
-#trabalho .beneficios article > div h2 {
+#beneficios article > div h2 {
   font-size: clamp(20px, 2vw, 28px);
 }
-#trabalho .beneficios article {
+#beneficios article {
   display: flex;
   flex-direction: row;
 }
-#trabalho .beneficios article > * {
+#beneficios article > * {
   flex: 1;
 }
-#trabalho .beneficios article > div > * {
+#beneficios article > div > * {
   padding: 8px 8px;
 }
 #trabalho span {
@@ -334,32 +361,32 @@ h1 {
 }
 
 /****************** perguntas *****************/
-#trabalho .perguntas {
+#perguntas {
   margin: 30px;
   display: flex;
   flex-direction: column;
   background-color: #f8f8f8;
 }
-#trabalho .perguntas h1 {
+#perguntas h1 {
   color: var(--corSecond);
   background-color: var(--navColor);
 }
-#trabalho .perguntas p {
+#perguntas p {
   color: #6b6666;
 }
-#trabalho .perguntas > div {
+#perguntas > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: justify;
 }
-#trabalho .perguntas > div > * {
+#perguntas > div > * {
   flex: 1;
   padding: 5px;
 }
 
-#trabalho .perguntas > span {
+#perguntas > span {
   font-family: "Times New Roman", Times, serif !important;
   background-color: var(--navColor);
   color: var(--corFirst);
@@ -371,6 +398,7 @@ h1 {
   position: relative;
   padding: 30px;
   text-align: center;
+  overflow: hidden;
 }
 #timeline h1,
 #timeline > p {
@@ -582,7 +610,9 @@ h1 {
 }
 
 #horario {
-  filter: drop-shadow(5px 5px 5px #858282);
+  filter: drop-shadow(5px 5px 5px #000000);
+  font-weight: normal !important;
+  background-color: var(--navColor);
 }
 #contatos > div span {
   font-style: italic;
@@ -735,24 +765,11 @@ textarea:-webkit-autofill:focus {
   position: fixed;
   bottom: 25px;
   left: 15px;
-  animation: flutuando 1s infinite linear;
-  filter: drop-shadow(5px 5px 5px #858282);
+  filter: drop-shadow(5px 5px 5px #0f0f0f);
 }
 #whatsapp a > i {
   font-size: 38px;
   color: #25d366;
-}
-
-@keyframes flutuando {
-  from {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  to {
-    transform: translateY(0);
-  }
 }
 
 #subir {
@@ -842,10 +859,10 @@ textarea:-webkit-autofill:focus {
   #sobre > div {
     flex-direction: column;
   }
-  #trabalho .beneficios article {
+  #beneficios article {
     flex-direction: column !important;
   }
-  #trabalho .perguntas > div {
+  #perguntas > div {
     flex-direction: column;
   }
 
