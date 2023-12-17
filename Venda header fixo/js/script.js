@@ -186,3 +186,13 @@ function ativarLink() {
 }
 
 window.addEventListener("scroll", ativarLink);
+
+
+
+const array = [1,2,3]
+
+let array2 = array
+let array3 = array.slice(2)
+
+console.log(array2)
+console.log(array3)
